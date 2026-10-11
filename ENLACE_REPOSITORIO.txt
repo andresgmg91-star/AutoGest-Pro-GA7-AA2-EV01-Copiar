@@ -1,9 +1,8 @@
-Evidencia GA7-220501096-AA2-EV01 — AutoGest Pro
+EVIDENCIA GA7-220501096-AA2-EV01  
+Proyecto: AutoGest Pro  
+Aprendiz: Andrés Mantilla
 
-ENLACE REAL DEL REPOSITORIO: PENDIENTE DE PUBLICAR EN LA CUENTA DE GITHUB DEL APRENDIZ.
+Enlace del repositorio de GitHub:
+https://github.com/andresgmg91-star/AutoGest-Pro-GA7-AA2-EV01-Copiar
 
-No se colocó una URL inventada. Para completar este requisito:
-1. Cree en GitHub un repositorio vacío, por ejemplo: AutoGest-Pro-GA7-AA2-EV01.
-2. Publique esta carpeta usando los comandos indicados en README.md.
-3. Reemplace esta nota por la URL real del repositorio (por ejemplo, https://github.com/USUARIO/AutoGest-Pro-GA7-AA2-EV01).
-4. Comprima nuevamente la carpeta para la entrega final.
+El repositorio contiene los archivos fuente del módulo de gestión de clientes, la conexión a la base de datos mediante JDBC, el script SQL y la documentación del proyecto.
