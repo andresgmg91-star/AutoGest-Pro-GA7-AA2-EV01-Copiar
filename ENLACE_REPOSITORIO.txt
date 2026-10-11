@@ -1,0 +1,9 @@
+Evidencia GA7-220501096-AA2-EV01 — AutoGest Pro
+
+ENLACE REAL DEL REPOSITORIO: PENDIENTE DE PUBLICAR EN LA CUENTA DE GITHUB DEL APRENDIZ.
+
+No se colocó una URL inventada. Para completar este requisito:
+1. Cree en GitHub un repositorio vacío, por ejemplo: AutoGest-Pro-GA7-AA2-EV01.
+2. Publique esta carpeta usando los comandos indicados en README.md.
+3. Reemplace esta nota por la URL real del repositorio (por ejemplo, https://github.com/USUARIO/AutoGest-Pro-GA7-AA2-EV01).
+4. Comprima nuevamente la carpeta para la entrega final.

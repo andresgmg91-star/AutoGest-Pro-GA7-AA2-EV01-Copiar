@@ -1,0 +1,6 @@
+# Copie este archivo como db.properties si necesita cambiar los valores de conexión.
+# Configuración de ejemplo para una instalación local de XAMPP/MariaDB.
+# En equipos reales, use un usuario exclusivo de la aplicación y una contraseña segura.
+db.url=jdbc:mariadb://localhost:3306/autogest_pro
+db.username=root
+db.password=

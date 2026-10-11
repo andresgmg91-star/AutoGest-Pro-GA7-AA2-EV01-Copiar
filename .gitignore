@@ -1,0 +1,13 @@
+# Archivos generados por Java/Maven
+target/
+*.class
+
+# Configuración local: no subir contraseñas ni configuraciones personales
+src/main/resources/db.properties
+
+# Archivos propios del editor/Windows
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
