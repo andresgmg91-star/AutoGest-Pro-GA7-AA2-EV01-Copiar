@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel principal | AutoGest Pro</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            padding: 22px 30px;
+            background: #166534;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .bienvenida {
+            padding: 28px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .bienvenida h2 {
+            color: #166534;
+        }
+
+        .modulos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .modulo {
+            padding: 24px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .modulo h3 {
+            margin-top: 0;
+            color: #166534;
+        }
+
+        .enlace-modulo {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .enlace-modulo:hover {
+            border-color: #166534;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .cerrar {
+            margin-top: 24px;
+            padding: 12px 20px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .cerrar:hover {
+            background: #b91c1c;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AutoGest Pro</h1>
+        <p>Sistema de gestión para talleres automotrices</p>
+    </header>
+
+    <main>
+        <section class="bienvenida">
+            <h2>¡Bienvenido a AutoGest Pro!</h2>
+
+            <p>
+                Has iniciado sesión correctamente.
+            </p>
+
+            <p>
+                Desde este panel podrás acceder a los módulos
+                de gestión del taller.
+            </p>
+        </section>
+
+        <section class="modulos">
+
+            <a href="/clientes" class="modulo enlace-modulo">
+                <h3>Clientes</h3>
+                <p>Gestión de la información de los clientes.</p>
+            </a>
+
+            <article class="modulo">
+                <h3>Vehículos</h3>
+                <p>Organización de los vehículos del taller.</p>
+            </article>
+
+            <article class="modulo">
+                <h3>Servicios</h3>
+                <p>Espacio para los servicios de mantenimiento.</p>
+            </article>
+
+        </section>
+
+        <form action="/logout" method="post">
+            <button class="cerrar" type="submit">
+                Cerrar sesión
+            </button>
+        </form>
+    </main>
+</body>
+</html>

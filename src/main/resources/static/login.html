@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar | AutoGest Pro</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 400px;
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            color: #166534;
+            text-align: center;
+        }
+
+        .descripcion {
+            margin-bottom: 28px;
+            color: #64748b;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #86efac;
+            border-color: #15803d;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #15803d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #166534;
+        }
+
+        .volver {
+            display: block;
+            margin-top: 20px;
+            color: #166534;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .mensaje-error {
+            display: none;
+            margin-bottom: 16px;
+            padding: 12px;
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1>AutoGest Pro</h1>
+
+        <p class="descripcion">
+            Ingresa tus datos para acceder al sistema.
+        </p>
+
+        <div id="mensaje-error"
+             class="mensaje-error"
+             role="alert"
+             aria-live="polite"></div>
+
+        <form action="/login" method="post">
+            <label for="usuario">Usuario</label>
+            <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="Ingresa tu usuario"
+                autocomplete="username"
+                required
+            >
+
+            <label for="clave">Contraseña</label>
+            <input
+                type="password"
+                id="clave"
+                name="clave"
+                placeholder="Ingresa tu contraseña"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <a class="volver" href="/">Volver al inicio</a>
+    </main>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const codigo = parametros.get("error");
+        const elemento = document.getElementById("mensaje-error");
+
+        const mensajes = {
+            usuario: "Usuario no registrado. Verifica los datos e intenta nuevamente.",
+            clave: "Contraseña incorrecta. Verifica tu contraseña e intenta nuevamente.",
+            acceso: "No fue posible validar el acceso. Verifica la conexión con la base de datos."
+        };
+
+        if (codigo && mensajes[codigo]) {
+            elemento.textContent = mensajes[codigo];
+            elemento.style.display = "block";
+        }
+    </script>
+</body>
+</html>
